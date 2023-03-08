@@ -1,0 +1,14 @@
+.anchor_header {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

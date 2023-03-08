@@ -1,0 +1,44 @@
+<!DOCTYPE persoane [
+    <!ELEMENT persoane (persoana+)>
+    <!ELEMENT persoana (nume,prenume,varsta,telefon,adresa)>
+    <!ATTLIST persoana id CDATA #REQUIRED>
+    <!ELEMENT nume (#PCDATA)>
+    <!ELEMENT prenume (#PCDATA)>
+    <!ELEMENT varsta (#PCDATA)>
+    <!ELEMENT telefon (#PCDATA)>
+    <!ELEMENT adresa (strada,numar,localitate,judet,tara)>
+    <!ELEMENT strada (#PCDATA)>
+    <!ELEMENT numar (#PCDATA)>
+    <!ELEMENT localitate (#PCDATA)>
+    <!ELEMENT judet (#PCDATA)>
+    <!ELEMENT tara (#PCDATA)>
+]>
+
+<persoane>
+    <persoana id="1">
+        <nume>Popescu</nume>
+        <prenume>Ion</prenume>
+        <varsta>30</varsta>
+        <telefon>0722222222</telefon>
+        <adresa>
+            <strada>Strada 1</strada>
+            <numar>1</numar>
+            <localitate>Localitate 1</localitate>
+            <judet>Judet 1</judet>
+            <tara>Tara 1</tara>
+        </adresa>
+    </persoana>
+    <persoana id="2">
+        <nume>Ionescu</nume>
+        <prenume>Ion</prenume>
+        <varsta>30</varsta>
+        <telefon>0722222222</telefon>
+        <adresa>
+            <strada>Strada 2</strada>
+            <numar>2</numar>
+            <localitate>Localitate 2</localitate>
+            <judet>Judet 2</judet>
+            <tara>Tara 2</tara>
+        </adresa>
+    </persoana>
+</persoane>
