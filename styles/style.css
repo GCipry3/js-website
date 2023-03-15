@@ -8,7 +8,9 @@
     --header-color: #3a3a3a;
     --gap: 2rem;
     --item-min-height: 30rem;
+    --article-min-height: 30rem;
     --font-size: 3rem;
+    --font-size-medium: 2.5rem;
     --font-size-small: 2rem;
 }
 
@@ -21,6 +23,7 @@
 
 html{
     font-size: 10px;
+    height:100%
 }
 
 body{
@@ -28,6 +31,9 @@ body{
     font-size: var(--font-size);
     color: var(--light-color-alt);
     background-color: var(--background-color);
+    height: 100%;
+    display:flex;
+    flex-direction: column;
 }
 
 a{
@@ -82,7 +88,6 @@ table,th,td{
 
 .navbar{
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: var(--gap) var(--gap);
 }
@@ -133,7 +138,7 @@ table,th,td{
 .headline-banner{
     font-size: var(--font-size-small);
     display: flex;
-    align-items: center;
+    justify-content: center;
     gap: var(--gap);
     background-color: var(--header-color);
     width: fit-content;
@@ -146,7 +151,69 @@ table,th,td{
     color: var(--light-color);
 }
 
-.footer{
+.article{
+    display: flex;
+    flex-direction: row;
+    min-height: var(--article-min-height);
     padding: var(--gap);
-    justify-content: flex-end;
+    background-color: var(--header-color);
+}
+
+
+.article img{
+    padding-right: var(--gap);
+}
+
+.article-data-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.article-author{
+    font-size: var(--font-size);
+    color: var(--light-color);
+}
+
+.article-date{
+    font-size: var(--font-size-small);
+    color: var(--light-color-alt);
+}
+
+.article-data{
+    font-size: var(--font-size-medium);
+    color: var(--light-color-alt);
+    margin-top: var(--gap);
+}
+
+.article-title{
+    font-size: var(--font-size);
+    color: var(--light-color);
+    margin-top: var(--gap);
+    display: flex;
+    justify-content:center;
+}
+
+.footer {
+    padding: var(--gap);
+    margin-top:auto;
+}
+
+.footer-container {
+    gap: var(--gap);
+    display: flex;
+    justify-content: space-between;
+    padding-block: var(--gap);
+}
+
+.footer-nav{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    color: var(--light-color);
+}
+
+.footer-social{
+    display: flex;
+    gap: var(--gap);
+    color: var(--light-color);
 }
