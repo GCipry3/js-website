@@ -5,14 +5,95 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        <div style="width:100%;height:100%">
-            <div style="width:100%;height: 2em;background-color: green; ">
-                <a href="index.html" class="anchor_header">Home</a>
-                <a href="pages/despre.html" class="anchor_header">Despre</a>
-                <a href="pages/video.html" class="anchor_header">Video</a>
-                <a href="pages/inregistrare.html" class="anchor_header">Inregistrare</a>
+        <header id="header" class="header">
+            <nav class="navbar container">
+                <a href="/index.html"><h2 class="logo">Blog</h2></a>
+                
+                <div class="menu" id="menu">
+                    <ul class="list">
+                        <li class="list-item">
+                            <a href="#" class="list-link">Home</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Categories</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Reviews</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">News</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list list-right">
+                    <a href="/about.html" class="list-link">About</a>
+                    <a href="/register.html" class="list-link">Register</a>
+                    <a href="/video.html" class="list-link">Video</a>
+                </div>
+            </nav>
+        </header>
+
+        <section class="featured-articles section-header-offset">
+            <div class="featured-articles-container container d-grid">
+                <div class="featured-content d-grid">
+
+                    <div class="headline-banner">
+                        <h3 class="headline">
+                            <span class="place-items-center">Breaking News</span>
+                        </h3>
+                        <span class="headline-description">Faculty of Automatic Control and Computer Engineering shuts down due to pandemic
+                            issues</span>
+                    </div>
+                    <div class="article">
+                        <img src="https://picsum.photos/200/200" class="article-image"/>
+                        <span class="article-category">Tech</span>
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>Jan 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <img src="https://picsum.photos/200/200" class="article-image" />
+                        <span class="article-category">Tech</span>
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>Jan 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <img src="https://picsum.photos/200/200" class="article-image" />
+                        <span class="article-category">Tech</span>
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>Jan 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <img src="https://picsum.photos/200/200" class="article-image" />
+                        <span class="article-category">Tech</span>
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>Jan 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h1 style="text-align:center">Home page</h1>
-        </div>
+        </section>
+        
+        <footer class="footer">
+            <hr/>
+
+            <div class="footer-container container">
+                
+            </div>
+        </footer>
     </body>
 </html>
