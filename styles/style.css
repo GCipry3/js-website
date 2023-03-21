@@ -9,9 +9,9 @@
     --gap: 2rem;
     --item-min-height: 30rem;
     --article-min-height: 30rem;
-    --font-size: 3rem;
-    --font-size-medium: 2.5rem;
-    --font-size-small: 2rem;
+    --font-size: 2rem;
+    --font-size-medium: 1.5rem;
+    --font-size-small: 1rem;
 }
 
 *{
@@ -73,7 +73,7 @@ table,th,td{
 }
 
 .container{
-    max-width: 160rem;
+    max-width: 140rem;
     margin: 0 auto;
     padding: 0 var(--gap);
 }
@@ -210,10 +210,12 @@ table,th,td{
     flex-direction: column;
     gap: var(--gap);
     color: var(--light-color);
+    font-size: var(--font-size-medium);
 }
 
 .footer-social{
     display: flex;
     gap: var(--gap);
     color: var(--light-color);
+    font-size: var(--font-size-medium);
 }
