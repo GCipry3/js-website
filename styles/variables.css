@@ -1,0 +1,16 @@
+:root{
+    --light-color: #ffffff;
+    --light-color-alt: #afb6cd;
+    --dark-color: #000000;
+    --dark-color-alt: #2d3748;
+    --font-family: 'Alkatra', sans-serif;
+    --background-color: #161616;
+    --header-color: #3a3a3a;
+    --gap: 2rem;
+    --item-min-height: 30rem;
+    --article-min-height: 30rem;
+    --font-size: 2rem;
+    --font-size-medium: 1.5rem;
+    --font-size-small: 1rem;
+    --border-color: #ddd;
+}
