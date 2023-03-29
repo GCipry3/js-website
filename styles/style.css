@@ -120,6 +120,7 @@ table,th,td{
 }
 
 .headline-banner{
+    border-radius:1rem;
     font-size: var(--font-size-small);
     display: flex;
     justify-content: center;
