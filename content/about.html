@@ -2,93 +2,110 @@
 <html>
 
 <head>
-    <title>Home</title>
+    <title>About</title>
+    <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alkatra" rel="stylesheet">
 </head>
 
 <body>
     <header id="header" class="header">
         <nav class="navbar container">
             <a href="/index.html">
-                <h2 class="logo">Blog</h2>
+                <h2 class="logo">Top Tech Companies</h2>
             </a>
-
             <div class="list list-right">
                 <a href="/about.html" class="list-link">About</a>
                 <a href="/register.html" class="list-link">Register</a>
                 <a href="/video.html" class="list-link">Video</a>
+                <a href="/learn.html" class="list-link">Learn</a>
             </div>
         </nav>
     </header>
-
     
-    <h1>Programare Web</h1>
-    <h2>Limbajul HTML</h2>
-    <p></p><strong>HTML(HyperText Markup Language)</strong> 
-        este un 
-        <i>limbaj de marcare</i> 
-        utilizat pentru a crea pagini web.
-    </p>
-    <p>Un Exemplu de cod html il gasiti in imaginea urmatoare care se afla la adresa
-        <a href="https://en.wikipedia.org/wiki/HTML">https://en.wikipedia.org/wiki/HTML</a>
-    </p>
-    <img src="https://picsum.photos/200/300" style="height:147px" />
-    <p><strong><i>Tag-urile </i></strong>html cele mai utilizate in realizarea tabelelor sunt:</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Table</th>
-                <th>defineste un tabel</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>tr</td>
-                <td>un rand intr-un tabel</td>
-            </tr>
-            <tr>
-                <td>td</td>
-                <td>o celula intr-un tabel</td>
-            </tr>
-        </tbody>
-    </table>
-    <p>
-        <strong>Observatie: </strong>Pentru a pune un contur unui tabel se poate
-        dar nu se recomanda sa se puna atributul border="1".
-    </p>
-    <p>
-        <i>The border attribute on the table element is absolute.</i>
-    </p>
+    <section class="featured-articles section-header-offset">
+        <div class="featured-articles-container container d-grid">
+            <h1>About Us</h1>
+            <p>Top Tech Companies is a blog dedicated to providing news, reviews, and insights about the top technology
+                companies in the world. Our team of experts is passionate about technology and is dedicated to keeping our
+                readers up-to-date with the latest developments in the industry.</p>
+            <p>Whether you are a tech enthusiast or just curious about the latest trends, our blog has something for
+                everyone. We cover a wide range of topics, including artificial intelligence, cybersecurity, cloud
+                computing, and more.</p>
+            <p><strong></i>Our mission</i></strong> is to provide our readers with accurate, unbiased information and help them make informed
+                decisions about the technology products and services they use. We believe that technology can make the world
+                a better place, and we are committed to sharing our knowledge and expertise to make that happen.</p>
+            <br>
+            <img src="https://picsum.photos/500/300" alt="Tech Companies" style="display: block; margin: auto;">
+            <br>
+            <div class="d-grid">
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th>Technology</th>
+                            <th>Company</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Smartphones</td>
+                            <td>Apple</td>
+                        </tr>
+                        <tr>
+                            <td>Laptops</td>
+                            <td>Microsoft</td>
+                        </tr>
+                        <tr>
+                            <td>Cloud Services</td>
+                            <td>Amazon</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <form class="about-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <label for="favorite-color">Favorite color:</label>
+                    <select id="favorite-color" name="favorite-color">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <br>
+            <iframe src="index.html" height="500" width="100%"></iframe>
+        </div>
+    </section>
 
-    <p>Un exemplu de formular este urmatorul:</p>
-    <form>
-        <label>Nume </label><input type="text" id="nume" placeholder="Galbeaza"></input><br>
-        <label>Parola </label><input type="password" id="parola" placeholder="Parola"></input><br>
-        <label>Culoare preferata </label>
-        <select id="favorite-color">
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-        </select><br>
-        <label>Descriere </label>
-        <textarea id="descriere" placeholder="Descriere" rows="3"></textarea><br>
-        <input type="checkbox" id="de-acord"></input><label>Sunt de acord cu conditiile</label><br><br>
-        <input type="submit" value="Trimite"></input>
-    </form>
 
-    <p>Pentru a crea liste se pot folosi tag-urile: </p>
-    <ul>
-        <li>ul - pentru liste neordonate</li>
-        <li>ol - pentru liste ordonate</li>
-        <li>li - pentru elementele listei</li>
-    </ul>
-
-    <p>Pentru a insera un document HTML in altul se poate folosi thtmlag-ul iframe</p>
-    <p>Astfel, exemplul de mai jos insereaza continutul de la adresa 
-        <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
-    </p>
-    <iframe src="/index.html" height="500" width="1000"></iframe>
-    <hr/>
-    <p>&copy 2023. Programare web</p>
+    <footer class="footer">
+        <hr>
+        <div class="footer-container container">
+            <div class="footer-left">
+                <h4>&copy; 2023 Top Tech Companies</h4>
+                <h5>Created by [Your Name]</h5>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-right">
+                <h4>Follow us:</h4>
+                <nav class="footer-social">
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
