@@ -19,20 +19,23 @@ Welcome to the Top Tech Companies blog project! This project aims to provide new
 
 1. Clone the repository to your local machine:
 ```
-git clone hidden_url
+git clone (TODO)
 ```
 
 2. Navigate to the project folder:
+```
+cd (TODO)
+```
 
 3. Run the server:
 ```
-python server_web/server_web.py
+python3 server_web/server_web.py
 ```
 
 4. Open your browser and visit `http://localhost:8080`
 
 ## 📁 Project Structure
-
+```plaintext
 .
 |   README.md
 |
@@ -65,3 +68,4 @@ python server_web/server_web.py
 \---server_web
         launch_server.sh
         server_web.py
+```
