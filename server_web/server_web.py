@@ -1,5 +1,11 @@
 import socket
 import time
+import gzip
+import threading
+
+
+def compress_content(content):
+    return gzip.compress(content, compresslevel=9)
 
 def log_request(request):
     with open('log_requests.txt', 'a') as f:
@@ -42,11 +48,13 @@ def handle_request(request, client):
     try:
         with open(filepath, "rb") as f:
             content = f.read()
-        response = f"HTTP/1.1 200 OK\r\nContent-Type: {get_content_type(filename)}\r\n\r\n"
+        
+        compressed_content = compress_content(content)
+        response = f"HTTP/1.1 200 OK\r\nContent-Type: {get_content_type(filename)}\r\nContent-Encoding: gzip\r\n\r\n"
         log_request(f"{headers[0]}\n{response}")
 
         client.send(response.encode())
-        client.send(content)
+        client.send(compressed_content)
     except FileNotFoundError:
         response = "HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\n\r\nFile not found."
         client.send(response.encode())
