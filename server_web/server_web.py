@@ -76,8 +76,8 @@ def main():
 
             request = client_socket.recv(1024).decode('utf-8')
             print(f'S-a citit mesajul: \n---------------------------\n{request}\n--------------------------')
-            handle_request(request, client_socket)
-            client_socket.close()
+            client_thread = threading.Thread(target=handle_request, args=(request, client_socket))
+            client_thread.start()
 
             print('S-a terminat comunicarea cu clientul.')
         except Exception as e:
