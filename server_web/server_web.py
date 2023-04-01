@@ -24,7 +24,7 @@ def handle_request(request, client):
     if filename == "/":
         filename = "/index.html"
 
-    filepath = "content" + filename
+    filepath = "../content" + filename
     try:
         with open(filepath, "rb") as f:
             content = f.read()

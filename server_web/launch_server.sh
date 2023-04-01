@@ -1,4 +1,13 @@
 #!/bin/bash
 echo "Starting the server..."
-cd server_web
-python3 server_web.py
+dir="$(dirname "$0")"               # get the directory name of the script
+cd "$dir"                           # change the current working directory to the script directory
+
+cleanup() {
+    echo "Stopping the server..."
+    pkill -TERM -P $$                 # Send SIGTERM signal to all child processes
+}
+
+trap cleanup SIGINT
+
+python3 server_web.py               # construct the path to server_web.py and run it
