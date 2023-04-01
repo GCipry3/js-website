@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Register</title>
+    <title>Registration</title>
+    <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alkatra" rel="stylesheet">
 </head>
+
 <body>
     <header id="header" class="header">
         <nav class="navbar container">
@@ -15,35 +19,57 @@
                 <a href="/about.html" class="list-link">About</a>
                 <a href="/register.html" class="list-link">Register</a>
                 <a href="/video.html" class="list-link">Video</a>
+                <a href="/learn.html" class="list-link">Learn</a>
             </div>
         </nav>
     </header>
-    <div style="width:100%;height:100%">
-        <div style="width:100%;height: 2em;background-color: green; ">
-            <a href="../index.html" class="anchor_header">Home</a>
-            <a href="despre.html" class="anchor_header">Despre</a>
-            <a href="video.html" class="anchor_header">Video</a>
-            <a href="inregistrare.html" class="anchor_header">Inregistrare</a>
-        </div> 
-        <div style="margin-top:2em">
-            <h1 style="text-align:center">Formular de inregistrare</h1>
-            <form action="#" method="POST">
-                <label>
-                    Username: 
-                    <input type="text" name="username" placeholder="Username" required>
-                </label><br />
-                <label>
-                    Parola:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="password" name="password" placeholder="Parola" required>
-                </label><br />
-                <label>
-                    Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="email" name="email" placeholder="Email" required>
-                </label><br /><br />
-                <!--Send button-->
-                <input type="submit" value="Trimite">
+    <section class="section-header-offset">
+        <div class="container">
+            <h2>Registration</h2>
+            <form class="about-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+
+                <input type="submit" value="Register">
             </form>
         </div>
-    </div>
+    </section>
+
+    <footer class="footer">
+        <hr>
+        <div class="footer-container container">
+            <div class="footer-left">
+                <h4>&copy; 2023 Galbeaza Ciprian's Blog</h4>
+                <h5>Created by Galbeaza Ciprian</h5>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-right">
+                <h4>Follow us:</h4>
+                <nav class="footer-social">
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">Github</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

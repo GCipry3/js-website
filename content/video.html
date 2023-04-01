@@ -3,7 +3,9 @@
 
 <head>
     <title>Video</title>
+    <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alkatra" rel="stylesheet">
 </head>
 
 <body>
@@ -17,20 +19,25 @@
                 <a href="/about.html" class="list-link">About</a>
                 <a href="/register.html" class="list-link">Register</a>
                 <a href="/video.html" class="list-link">Video</a>
+                <a href="/learn.html" class="list-link">Learn</a>
             </div>
         </nav>
     </header>
-    <video width="320" height="240" controls>
-        <source src="/resources/videos/programming.mp4" type="video/mp4">
-    </video>
 
+    <section class="featured-articles section-header-offset">
+        <div class="featured-articles-container container d-grid">
+            <video width="100%" height="100%" controls>
+                <source src="/resources/videos/programming.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
 
     <footer class="footer">
         <hr>
         <div class="footer-container container">
             <div class="footer-left">
-                <p>&copy; 2023 Galbeaza Ciprian's Blog</p>
-                <p>Created by Galbeaza Ciprian</p>
+                <h4>&copy; 2023 Galbeaza Ciprian's Blog</h4>
+                <h5>Created by Galbeaza Ciprian</h5>
                 <nav class="footer-nav">
                     <ul>
                         <li><a href="/index.html">Home</a></li>
@@ -40,7 +47,7 @@
                 </nav>
             </div>
             <div class="footer-right">
-                <p>Follow us:</p>
+                <h4>Follow us:</h4>
                 <nav class="footer-social">
                     <ul>
                         <li><a href="#">Facebook</a></li>

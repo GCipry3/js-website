@@ -1,5 +1,12 @@
 import socket
+import time
 
+def log_request(request):
+    with open('log_requests.txt', 'a') as f:
+        f.write("#"*30)
+        f.write(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+        f.write("#"*30)
+        f.write("\n"+request+'\n')
 
 def get_content_type(file):
     if file.endswith(".html"):
@@ -19,12 +26,14 @@ def get_content_type(file):
 
 def handle_request(request, client):
     headers = request.split('\r\n')
-    if not headers:
-        response = "HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\n\r\nError occured."
+
+    first_header = headers[0].split()
+    if len(first_header) < 2:
+        response = "HTTP/1.1 400 Bad Request\r\nContent-Type: text/html\r\n\r\nInvalid request."
         client.send(response.encode())
         return
-    
-    filename = headers[0].split()[1]
+
+    filename = first_header[1]
 
     if filename == "/":
         filename = "/index.html"
@@ -34,6 +43,8 @@ def handle_request(request, client):
         with open(filepath, "rb") as f:
             content = f.read()
         response = f"HTTP/1.1 200 OK\r\nContent-Type: {get_content_type(filename)}\r\n\r\n"
+        log_request(f"{headers[0]}\n{response}")
+
         client.send(response.encode())
         client.send(content)
     except FileNotFoundError:
@@ -49,19 +60,20 @@ def main():
     print("Server is running on http://localhost:8080")
 
     while True:
-        print('\n' + '#' * 70)
-        print('Serverul asculta potentiali clienti.')
-        client_socket, addr = server_socket.accept()
-        print('S-a conectat un client.')
+        try:
+            print('\n' + '#' * 70)
+            print('Serverul asculta potentiali clienti.')
+            client_socket, addr = server_socket.accept()
+            print('S-a conectat un client.')
 
-        request = client_socket.recv(1024).decode('utf-8')
-        print(
-            f'S-a citit mesajul: \n---------------------------\n{request}\n--------------------------')
-        handle_request(request, client_socket)
-        client_socket.close()
+            request = client_socket.recv(1024).decode('utf-8')
+            print(f'S-a citit mesajul: \n---------------------------\n{request}\n--------------------------')
+            handle_request(request, client_socket)
+            client_socket.close()
 
-        print('S-a terminat comunicarea cu clientul.')
-
+            print('S-a terminat comunicarea cu clientul.')
+        except Exception as e:
+            print(f'Error: {e}')
 
 if __name__ == "__main__":
     main()

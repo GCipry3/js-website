@@ -246,6 +246,7 @@ table,th,td{
 
 .about-form input[type="text"],
 .about-form input[type="password"],
+.about-form input[type="email"],
 .about-form select {
     width: 100%;
     padding: 1rem;
