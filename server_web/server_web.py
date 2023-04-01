@@ -19,6 +19,11 @@ def get_content_type(file):
 
 def handle_request(request, client):
     headers = request.split('\r\n')
+    if not headers:
+        response = "HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\n\r\nError occured."
+        client.send(response.encode())
+        return
+    
     filename = headers[0].split()[1]
 
     if filename == "/":
