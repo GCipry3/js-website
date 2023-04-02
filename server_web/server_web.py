@@ -9,10 +9,8 @@ def compress_content(content):
 
 def log_request(request):
     with open('log_requests.txt', 'a') as f:
-        f.write("#"*30)
-        f.write(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-        f.write("#"*30)
-        f.write("\n"+request+'\n')
+        f.write(f"{'#' * 30}{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}{'#' * 30}")
+        f.write(f"\n{request}\n")
 
 def get_content_type(file):
     if file.endswith(".html"):
@@ -60,6 +58,7 @@ def handle_request(request, client):
                     client.send(chunk)
                     chunk = f.read(1024)
         else:
+            # Compress the content
             compressed_content = compress_content(content)
             response = f"HTTP/1.1 200 OK\r\nContent-Type: {get_content_type(filename)}\r\nContent-Encoding: gzip\r\n\r\n"
             log_request(f"{headers[0]}\n{response}")
@@ -74,21 +73,25 @@ def handle_request(request, client):
 
 
 def main():
+    # Create a TCP socket
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server_socket.bind(('', 8080))
     server_socket.listen(5)
     print("Server is running on http://localhost:8080")
 
+    # Accept connections forever
     while True:
         try:
-            print('\n' + '#' * 70)
-            print('Serverul asculta potentiali clienti.')
+            # Accept a connection
+            print(f"\n{'#' * 70}")
+            print('The server is listening for the clients.')
             client_socket, addr = server_socket.accept()
-            print('S-a conectat un client.')
+            print(f'Client {addr} connected.')
 
+            # Receive the request
             request = client_socket.recv(1024).decode('utf-8')
-            print(f'S-a citit mesajul: \n---------------------------\n{request}\n--------------------------')
+            print(f"\nThe message is:\n{'-'*35}\n{request}\n{'-'*35}\n")
             client_thread = threading.Thread(target=handle_request, args=(request, client_socket))
             client_thread.start()
 
