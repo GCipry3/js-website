@@ -37,6 +37,7 @@ def handle_request(request, client):
     if len(first_header) < 2:
         response = "HTTP/1.1 400 Bad Request\r\nContent-Type: text/html\r\n\r\nInvalid request."
         client.send(response.encode())
+        client.close()
         return
 
     filename = first_header[1]
@@ -58,6 +59,8 @@ def handle_request(request, client):
     except FileNotFoundError:
         response = "HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\n\r\nFile not found."
         client.send(response.encode())
+
+    client.close()
 
 
 def main():
