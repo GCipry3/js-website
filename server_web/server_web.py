@@ -50,12 +50,22 @@ def handle_request(request, client):
         with open(filepath, "rb") as f:
             content = f.read()
         
-        compressed_content = compress_content(content)
-        response = f"HTTP/1.1 200 OK\r\nContent-Type: {get_content_type(filename)}\r\nContent-Encoding: gzip\r\n\r\n"
-        log_request(f"{headers[0]}\n{response}")
+        # Send the videos in chunks to avoid memory issues , and send the rest of the files compressed
+        if filename.endswith(".mp4"):
+            response = f"HTTP/1.1 200 OK\r\nContent-Type: {get_content_type(filename)}\r\n\r\n"
+            client.send(response.encode())
+            with open(filepath, "rb") as f:
+                chunk = f.read(1024)
+                while chunk:
+                    client.send(chunk)
+                    chunk = f.read(1024)
+        else:
+            compressed_content = compress_content(content)
+            response = f"HTTP/1.1 200 OK\r\nContent-Type: {get_content_type(filename)}\r\nContent-Encoding: gzip\r\n\r\n"
+            log_request(f"{headers[0]}\n{response}")
 
-        client.send(response.encode())
-        client.send(compressed_content)
+            client.send(response.encode())
+            client.send(compressed_content)
     except FileNotFoundError:
         response = "HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\n\r\nFile not found."
         client.send(response.encode())
