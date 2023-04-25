@@ -1,75 +1,20 @@
-<!DOCTYPE html>
-<html>
+<section class="section-header-offset">
+    <div class="container">
+        <h2>Registration</h2>
+        <form class="about-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
 
-<head>
-    <title>Registration</title>
-    <link rel="stylesheet" href="styles/variables.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Alkatra" rel="stylesheet">
-</head>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-<body>
-    <header id="header" class="header">
-        <nav class="navbar container">
-            <a href="/index.html">
-                <h2 class="logo">Blog</h2>
-            </a>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-            <div class="list list-right">
-                <a href="/about.html" class="list-link">About</a>
-                <a href="/register.html" class="list-link">Register</a>
-                <a href="/video.html" class="list-link">Video</a>
-                <a href="/learn.html" class="list-link">Learn</a>
-            </div>
-        </nav>
-    </header>
-    <section class="section-header-offset">
-        <div class="container">
-            <h2>Registration</h2>
-            <form class="about-form">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-
-                <label for="confirm_password">Confirm Password:</label>
-                <input type="password" id="confirm_password" name="confirm_password" required>
-
-                <input type="submit" value="Register">
-            </form>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <hr>
-        <div class="footer-container container">
-            <div class="footer-left">
-                <h4>&copy; 2023 Galbeaza Ciprian's Blog</h4>
-                <h5>Created by Galbeaza Ciprian</h5>
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/about.html">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer-right">
-                <h4>Follow us:</h4>
-                <nav class="footer-social">
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">Github</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </footer>
-</body>
-
-</html>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</section>

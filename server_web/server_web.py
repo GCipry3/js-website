@@ -25,6 +25,8 @@ def get_content_type(file):
         return "video/mp4"
     if file.endswith(".xml"):
         return "application/xml"
+    if file.endswith(".ico"):
+        return "image/x-icon"
     return "text/plain"
 
 

@@ -10,4 +10,4 @@ cleanup() {
 
 trap cleanup SIGINT
 
-python3 server_web.py               # construct the path to server_web.py and run it
+python server_web.py               # construct the path to server_web.py and run it

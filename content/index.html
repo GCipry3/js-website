@@ -9,19 +9,19 @@
     <body>
         <nav id="header" class="header">
             <nav class="navbar container">
-                <a href="/index.html"><h2 class="logo">Blog</h2></a>
+                <a onclick="changeContent('home')"><h2 class="logo">Blog</h2></a>
 
                 <div class="list list-right">
-                    <a href="/about.html" class="list-link">About</a>
-                    <a href="/register.html" class="list-link">Register</a>
-                    <a href="/video.html" class="list-link">Video</a>
-                    <a href="/learn.html" class="list-link">Learn</a>
+                    <a onclick="changeContent('about')"     class="list-link">About</a>
+                    <a onclick="changeContent('register')"  class="list-link">Register</a>
+                    <a onclick="changeContent('video')"     class="list-link">Video</a>
+                    <a onclick="changeContent('learn','js/draw_canvas.js','startScript')"     class="list-link">Learn</a>
                 </div>
 
                 <div class="menu" id="menu">
                     <ul class="list">
                         <li class="list-item">
-                            <a href="#" class="list-link">Home</a>
+                            <a onclick="" class="list-link">Home</a>
                         </li>
                         <li class="list-item">
                             <a href="#" class="list-link">Categories</a>
@@ -40,75 +40,9 @@
             </nav>
         </nav>
 
-        <section class="featured-articles section-header-offset">
-            <div class="featured-articles-container container d-grid">
-                <div class="featured-content d-grid">
-
-                    <div class="headline-banner">
-                        <h3 class="headline">
-                            <span class="place-items-center">Breaking News</span>
-                        </h3>
-                        <span class="headline-description">Faculty of Automatic Control and Computer Engineering shuts down due to pandemic
-                            issues</span>
-                    </div>
-
-                    <div class="article">
-                        <img src="resources/images/article-image-1.jpg" class="article-image"/>
-                        <div class="article-data-container">
-                            <div>
-                                <span class="article-author">Galbeaza Ciprian</span>
-                                <span class="article-date">Jan 2023</span>
-                            </div>
-                            <div class="article-title">
-                                <span>TechCrunch</span>
-                            </div>
-                            <div class="article-data">
-                                <span>"TechCrunch covers the business of technology, startups, venture capital funding, and Silicon Valley." - TechCrunch is a
-                                popular technology news blog that provides in-depth coverage of the latest trends, products, and companies in the tech
-                                industry. The blog focuses on startups, funding, and innovation in Silicon Valley, making it an essential read for tech
-                                enthusiasts and investors alike.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <img src="resources/images/article-image-2.jpg" class="article-image"/>
-                        <div class="article-data-container">
-                            <div>
-                                <span class="article-author">Galbeaza Ciprian</span>
-                                <span class="article-date">Jan 2023</span>
-                            </div>
-                            <div class="article-title">
-                                <span>The Verge</span>
-                            </div>
-                            <div class="article-data">
-                                <span>"The Verge covers the intersection of technology, science, art, and culture." - The Verge is a technology news blog that
-                                explores the impact of technology on society and culture. From the latest gadgets and devices to scientific
-                                breakthroughs and cultural trends, The Verge provides a comprehensive look at the world of technology and its influence
-                                on our daily lives.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <img src="resources/images/article-image-3.jpg" class="article-image"/>
-                        <div class="article-data-container">
-                            <div>
-                                <span class="article-author">Galbeaza Ciprian</span>
-                                <span class="article-date">Jan 2023</span>
-                            </div>
-                            <div class="article-title">
-                                <span>Engadget magazine</span>
-                            </div>
-                            <div class="article-data">
-                                <span>"Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics." -
-                                Engadget is a technology news blog that focuses on gadgets and consumer electronics. From smartphones and laptops to
-                                smart homes and wearables, Engadget provides detailed reviews, news, and analysis of the latest products and
-                                technologies in the market.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <main id="content">
+        </main>
+        
         
         <footer class="footer">
             <hr>
@@ -136,5 +70,7 @@
                 </div>
             </div>
         </footer>
+
+        <script src="js/script.js"></script>
     </body>
 </html>

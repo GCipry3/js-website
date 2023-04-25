@@ -1,114 +1,39 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Learn</title>
-        <link rel="stylesheet" href="styles/variables.css">
-        <link rel="stylesheet" href="styles/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Alkatra" rel="stylesheet">
-    </head>
-    <body>
-        <header id="header" class="header">
-            <nav class="navbar container">
-                <a href="/index.html"><h2 class="logo">Blog</h2></a>
-
-                <div class="list list-right">
-                    <a href="/about.html" class="list-link">About</a>
-                    <a href="/register.html" class="list-link">Register</a>
-                    <a href="/video.html" class="list-link">Video</a>
-                    <a href="/learn.html" class="list-link">Learn</a>
-                </div>
-
-                <div class="menu" id="menu">
-                    <ul class="list">
-                        <li class="list-item">
-                            <a href="#" class="list-link">Home</a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#" class="list-link">Categories</a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#" class="list-link">Reviews</a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#" class="list-link">News</a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#" class="list-link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <section class="featured-articles section-header-offset">
-            <div class="featured-articles-container container d-grid">
-                <div>
-                    <h2>Section 1</h2>
-                    <table class="info-table">
-                        <tr>
-                            <td>URL:</td>
-                            <td id="current_url"></td>
-                        </tr>
-                        <tr>
-                            <td>Date:</td>
-                            <td id="current_data"></td>
-                        </tr>
-                        <tr>
-                            <td>Time:</td>
-                            <td id="current_time"></td>
-                        </tr>
-                        <tr>
-                            <td>Location:</td>
-                            <td id="current_location"></td>
-                        </tr>
-                        <tr>
-                            <td>Browser:</td>
-                            <td id="current_name_and_browser_version"></td>
-                        </tr>
-                        <tr>
-                            <td>Operating System:</td>
-                            <td id="current_os"></td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <h2>Section 2</h2>
-                    <canvas class="canvas" id="canvas"></canvas>
-                    <input type="color" id="stroke-color" value="#fff000">
-                    <input type="color" id="fill-color" value="#000fff">
-                </div>
-            </div>
-
-        </section>
-          
-        
-        <footer class="footer">
-            <hr>
-            <div class="footer-container container">
-                <div class="footer-left">
-                    <h4>&copy; 2023 Galbeaza Ciprian's Blog</h4>
-                    <h5>Created by Galbeaza Ciprian</h5>
-                    <nav class="footer-nav">
-                        <ul>
-                            <li><a href="/index.html">Home</a></li>
-                            <li><a href="/about.html">About</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="footer-right">
-                    <h4>Follow us:</h4>
-                    <nav class="footer-social">
-                        <ul>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Linkedin</a></li>
-                            <li><a href="#">Github</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </footer>
-        <script src="js/session_details.js"></script>
-        <script src="js/draw_canvas.js"></script>
-    </body>
-</html>
+<section class="featured-articles section-header-offset">
+    <div class="featured-articles-container container d-grid">
+        <div>
+            <h2>Section 1</h2>
+            <table class="info-table">
+                <tr>
+                    <td>URL:</td>
+                    <td id="current_url"></td>
+                </tr>
+                <tr>
+                    <td>Date:</td>
+                    <td id="current_data"></td>
+                </tr>
+                <tr>
+                    <td>Time:</td>
+                    <td id="current_time"></td>
+                </tr>
+                <tr>
+                    <td>Location:</td>
+                    <td id="current_location"></td>
+                </tr>
+                <tr>
+                    <td>Browser:</td>
+                    <td id="current_name_and_browser_version"></td>
+                </tr>
+                <tr>
+                    <td>Operating System:</td>
+                    <td id="current_os"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h2>Section 2</h2>
+            <canvas class="canvas" id="canvas"></canvas>
+            <input type="color" id="stroke-color" value="#fff000">
+            <input type="color" id="fill-color" value="#000fff">
+        </div>
+    </div>
+</section>
