@@ -19,12 +19,12 @@ Welcome to the Top Tech Companies blog project! This project aims to provide new
 
 1. Clone the repository to your local machine:
 ```
-git clone (TODO)
+git clone https://github.com/GCipry3/js-website
 ```
 
 2. Navigate to the project folder:
 ```
-cd (TODO)
+cd js-website
 ```
 
 3. Run the server:
